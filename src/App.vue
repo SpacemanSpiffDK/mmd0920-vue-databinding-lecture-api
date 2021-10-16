@@ -7,7 +7,7 @@
     http://jsonplaceholder.typicode.com/posts
    -->
   <div>
-    
+    mmd0920-vue-databinding-lecture-api has been setup correctly
   </div>
 </template>
 
