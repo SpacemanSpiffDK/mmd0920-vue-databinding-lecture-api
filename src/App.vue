@@ -7,41 +7,14 @@
     http://jsonplaceholder.typicode.com/posts
    -->
   <div>
-    <h2>Total vue packages</h2>
-    <div>
-      {{ totalVuePackages }}
-    </div>
-    <h2>Posts from jsonplaceholder</h2>
-    <div id="posts">
-      <div v-for="post in posts" v-bind:key="post.id" class="post">
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.body }}</p>
-      </div>
-    </div>
+    
   </div>
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   name: "App",
   components: {},
-  data() {
-    return {
-      totalVuePackages: null,
-      posts: null,
-    };
-  },
-  created() {
-    axios
-      .get("https://api.npms.io/v2/search?q=vue")
-      .then((response) => (this.totalVuePackages = response.data.total));
-
-    axios
-      .get("http://jsonplaceholder.typicode.com/posts")
-      .then((response) => (this.posts = response.data));
-  },
 };
 </script>
 
